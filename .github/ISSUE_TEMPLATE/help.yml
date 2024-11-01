@@ -1,0 +1,42 @@
+name: SB Engine help tab
+description: If you need help using the SB Engine.
+labels: [help wanted]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: "Describe your bug/help/problem here."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: modding
+    attributes:
+      label: "Are you modding a build from source or with Lua?"
+      options:
+        - Lua/HScript
+        - Source
+        - No (I am not using any programming language)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: btarget
+    attributes:
+      label: "What is your build target?"
+      options:
+        - "Android x86/x64/x32"
+        - "iOS"
+        - "Linux Debian/Fedora/Arch/Alpine/"
+        - "MacOS"
+        - "Windows x86/x64/x32"
+    validations:
+      required: true
+
+  - type: input
+    id: buildsummary
+    attributes:
+      label: "Did you edit anything in this build? If so, mention or summarize your changes."
+      placeholder: "Yes, I edited State.hx, SubState.hx or FileName.hx and tried to add a new option"
+    validations:
+      required: false
